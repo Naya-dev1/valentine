@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Surprise 💖</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-pink-200 to-pink-400 h-screen overflow-hidden relative"
+  >
+    <!-- Floating hearts -->
+    <div
+      id="heartsContainer"
+      class="absolute inset-0 pointer-events-none"
+    ></div>
+
+    <!-- Main content -->
+    <div
+      id="mainContent"
+      class="flex flex-col items-center justify-center h-screen relative z-10"
+    >
+      <h1 class="text-4xl font-bold mb-8 text-center">
+        Will you be my Valentine? 💌
+      </h1>
+      <div id="buttonsContainer" class="flex gap-6 relative">
+        <button
+          id="yesBtn"
+          class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded z-10"
+        >
+          Yes
+        </button>
+        <button
+          id="noBtn"
+          class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded z-10 whitespace-nowrap w-40 text-center"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div
+        class="modal-content bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 rounded-2xl shadow-2xl p-8 text-center max-w-md mx-4 modal-enter"
+      >
+        <h2 class="text-3xl font-bold mb-4 text-pink-600">Yay! 💖</h2>
+        <p class="mb-6">You clicked Yes! Happy Valentine's Day! 🌹</p>
+        <button
+          id="closeModal"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <audio
+      id="chimeSound"
+      src="https://www.soundjay.com/button/sounds/button-10.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
